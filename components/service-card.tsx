@@ -8,7 +8,7 @@ export default function ServiceCard({ service }: { service: Service }) {
 
   return (
     <Link
-      href={`/services#${service.slug}`}
+      href={`/services/${service.slug}`}
       className={`group relative flex flex-col gap-5 rounded-3xl border p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_-24px_rgba(18,41,79,0.25)] ${
         service.featured
           ? "border-gold/30 bg-linear-to-br from-navy to-ink text-white"

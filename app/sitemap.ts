@@ -1,13 +1,20 @@
 import type { MetadataRoute } from "next";
-import { site } from "@/lib/site";
+import { homeCare, services, site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/services", "/about", "/contact"];
+  const routes = [
+    "",
+    "/services",
+    "/about",
+    "/contact",
+    ...services.map((service) => `/services/${service.slug}`),
+    `/services/${homeCare.slug}`,
+  ];
 
   return routes.map((route) => ({
     url: `${site.url}${route}`,
     lastModified: new Date(),
     changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : 0.8,
+    priority: route === "" ? 1 : route === "/services" ? 0.9 : 0.7,
   }));
 }

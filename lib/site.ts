@@ -185,10 +185,17 @@ export const services: Service[] = [
 ];
 
 export const homeCare = {
+  slug: "home-care",
   title: "Mankind Care Home Care Agency",
+  short: "Trusted support and companionship in the comfort of home.",
   description:
     "Alongside our day programs, Mankind Care also operates a home care agency for individuals who need support and companionship in the comfort of their own home. If home care is what you are looking for, give us a call and we will walk you through how we can help.",
-};
+  bullets: [
+    "Support and companionship at home",
+    "Care built around your household and routine",
+    "One team for both day programs and home care",
+  ],
+} as const;
 
 export const topQuestions = [
   {
@@ -231,6 +238,28 @@ export const commitments = [
       "No two days look the same. Programming blends skill building with recreation, so every visit feels worthwhile.",
   },
 ] as const;
+
+export const getStartedSteps = [
+  {
+    title: "Reach out",
+    description:
+      "Call or send a message and tell us a little about your situation and what you are looking for.",
+  },
+  {
+    title: "Build a plan together",
+    description:
+      "We talk through goals, schedule, and what support should look like day to day.",
+  },
+  {
+    title: "Begin your program",
+    description:
+      "Start with a team that treats you like family from day one.",
+  },
+] as const;
+
+export function getServiceBySlug(slug: string) {
+  return services.find((service) => service.slug === slug);
+}
 
 export const coreSkills = [
   "Problem Solving",

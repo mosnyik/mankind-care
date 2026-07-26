@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
-import { Phone, ArrowRight, CheckCircle2, Home as HomeIcon } from "lucide-react";
+import Link from "next/link";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  CheckCircle2,
+  Home as HomeIcon,
+} from "lucide-react";
 import Container from "@/components/container";
 import Button from "@/components/button";
 import SectionHeading from "@/components/section-heading";
 import CtaBanner from "@/components/cta-banner";
 import CommitmentsGrid from "@/components/commitments-grid";
 import { serviceIconMap } from "@/components/icons";
-import { homeCare, services, site } from "@/lib/site";
+import { homeCare, services } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Our Services",
@@ -109,6 +115,19 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
+
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className={`group mt-auto inline-flex w-fit items-center gap-1.5 text-sm font-semibold ${
+                      service.featured ? "text-gold-soft" : "text-navy"
+                    }`}
+                  >
+                    Learn more
+                    <ArrowUpRight
+                      className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      strokeWidth={2}
+                    />
+                  </Link>
                 </div>
               );
             })}
@@ -123,13 +142,19 @@ export default function ServicesPage() {
                   {homeCare.title}
                 </h2>
                 <p className="text-sm leading-relaxed text-slate-600">
-                  {homeCare.description}
+                  {homeCare.short}
                 </p>
               </div>
-              <Button href={site.phoneHref} variant="primary" className="mt-auto w-fit">
-                <Phone className="h-4 w-4" strokeWidth={2} />
-                Call to Learn More
-              </Button>
+              <Link
+                href="/services/home-care"
+                className="group mt-auto inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-navy"
+              >
+                Learn more
+                <ArrowUpRight
+                  className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  strokeWidth={2}
+                />
+              </Link>
             </div>
           </div>
         </Container>
