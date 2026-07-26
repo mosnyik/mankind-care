@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-ink: #0a1830;
+  --color-navy: #12294f;
+  --color-navy-soft: #1c3c74;
+  --color-blue: #2454c7;
+  --color-blue-light: #5b8ef2;
+  --color-sky: #eef3fc;
+  --color-mist: #f6f7fb;
+  --color-gold: #b6893a;
+  --color-gold-soft: #e7d3a8;
+  --color-white: #ffffff;
+  --color-slate-900: #101826;
+  --color-slate-600: #4b5567;
+  --color-slate-400: #8993a6;
+  --color-line: #e3e7f0;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-ink: var(--color-ink);
+  --color-navy: var(--color-navy);
+  --color-navy-soft: var(--color-navy-soft);
+  --color-blue: var(--color-blue);
+  --color-blue-light: var(--color-blue-light);
+  --color-sky: var(--color-sky);
+  --color-mist: var(--color-mist);
+  --color-gold: var(--color-gold);
+  --color-gold-soft: var(--color-gold-soft);
+  --color-slate-900: var(--color-slate-900);
+  --color-slate-600: var(--color-slate-600);
+  --color-slate-400: var(--color-slate-400);
+  --color-line: var(--color-line);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in: fade-in 0.6s ease-out both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-white);
+  color: var(--color-slate-900);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--color-gold-soft);
+  color: var(--color-ink);
+}
+
+.font-serif-display {
+  font-family: var(--font-serif), ui-serif, Georgia, serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
