@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Car, ShieldCheck, Activity, MapPin, Users, Home as HomeIcon } from "lucide-react";
+import { MapPin, Users, Home as HomeIcon } from "lucide-react";
 import Container from "@/components/container";
 import SectionHeading from "@/components/section-heading";
 import CtaBanner from "@/components/cta-banner";
+import CommitmentsGrid from "@/components/commitments-grid";
 import { coreSkills, site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -13,27 +14,6 @@ export const metadata: Metadata = {
     canonical: "/about",
   },
 };
-
-const commitments = [
-  {
-    icon: Car,
-    title: "Reliable transportation",
-    description:
-      "Getting to and from our program is arranged and coordinated, so families never have to worry about the logistics of a visit.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Qualified, caring staff",
-    description:
-      "Every caregiver on our team is trained and genuinely invested in the comfort and wellbeing of the people they support.",
-  },
-  {
-    icon: Activity,
-    title: "A real variety of activities",
-    description:
-      "No two days look the same. Programming blends skill building with recreation, so every visit feels worthwhile.",
-  },
-];
 
 export default function AboutPage() {
   return (
@@ -132,21 +112,7 @@ export default function AboutPage() {
             align="center"
             className="mx-auto"
           />
-          <div className="grid gap-10 sm:grid-cols-3">
-            {commitments.map((item) => (
-              <div key={item.title} className="flex flex-col items-center gap-4 text-center">
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-navy shadow-[0_16px_40px_-20px_rgba(18,41,79,0.3)]">
-                  <item.icon className="h-7 w-7" strokeWidth={1.6} aria-hidden="true" />
-                </span>
-                <h3 className="font-serif-display text-lg text-ink">
-                  {item.title}
-                </h3>
-                <p className="max-w-xs text-sm leading-relaxed text-slate-600">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
+          <CommitmentsGrid />
         </Container>
       </section>
 

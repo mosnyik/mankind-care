@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Phone, ArrowRight, Home as HomeIcon } from "lucide-react";
+import { Phone, ArrowRight, CheckCircle2, Home as HomeIcon } from "lucide-react";
 import Container from "@/components/container";
 import Button from "@/components/button";
 import SectionHeading from "@/components/section-heading";
 import CtaBanner from "@/components/cta-banner";
+import CommitmentsGrid from "@/components/commitments-grid";
 import { serviceIconMap } from "@/components/icons";
 import { homeCare, services, site } from "@/lib/site";
 
@@ -39,91 +40,115 @@ export default function ServicesPage() {
         </Container>
       </section>
 
+      {/* Services grid */}
       <section className="py-20 sm:py-24">
-        <Container className="flex flex-col gap-6">
-          {services.map((service, index) => {
-            const Icon = serviceIconMap[service.icon];
-            const reversed = index % 2 === 1;
-            return (
-              <div
-                key={service.slug}
-                id={service.slug}
-                className={`scroll-mt-32 flex flex-col gap-8 rounded-4xl border p-8 sm:p-10 lg:flex-row lg:items-center ${
-                  service.featured
-                    ? "border-gold/30 bg-linear-to-br from-navy to-ink text-white"
-                    : "border-line bg-white"
-                } ${reversed ? "lg:flex-row-reverse" : ""}`}
-              >
-                <div className="flex shrink-0 flex-col items-start gap-3 lg:w-56">
-                  <span
-                    className={`flex h-14 w-14 items-center justify-center rounded-2xl ${
-                      service.featured
-                        ? "bg-white/10 text-gold-soft"
-                        : "bg-sky text-navy"
-                    }`}
-                  >
-                    <Icon className="h-7 w-7" strokeWidth={1.6} aria-hidden="true" />
-                  </span>
-                  {service.featured && (
-                    <span className="rounded-full bg-gold px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-wider text-white">
-                      Flagship Program
+        <Container>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service) => {
+              const Icon = serviceIconMap[service.icon];
+              return (
+                <div
+                  key={service.slug}
+                  id={service.slug}
+                  className={`flex scroll-mt-32 flex-col gap-5 rounded-4xl border p-7 ${
+                    service.featured
+                      ? "border-gold/30 bg-linear-to-br from-navy to-ink text-white lg:col-span-2"
+                      : "border-line bg-white"
+                  }`}
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <span
+                      className={`flex h-12 w-12 items-center justify-center rounded-2xl ${
+                        service.featured
+                          ? "bg-white/10 text-gold-soft"
+                          : "bg-sky text-navy"
+                      }`}
+                    >
+                      <Icon className="h-6 w-6" strokeWidth={1.75} aria-hidden="true" />
                     </span>
-                  )}
-                  <span
-                    className={`text-xs font-semibold uppercase tracking-[0.14em] ${
-                      service.featured ? "text-white/50" : "text-slate-400"
-                    }`}
-                  >
-                    Service {String(index + 1).padStart(2, "0")}
-                  </span>
-                </div>
-                <div className="flex flex-col gap-3">
-                  <h2
-                    className={`font-serif-display text-2xl sm:text-3xl ${
-                      service.featured ? "text-white" : "text-ink"
-                    }`}
-                  >
-                    {service.name}
-                  </h2>
-                  <p
-                    className={`max-w-2xl text-base leading-relaxed ${
-                      service.featured ? "text-white/75" : "text-slate-600"
-                    }`}
-                  >
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
+                    {service.featured && (
+                      <span className="rounded-full bg-gold px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-wider text-white">
+                        Flagship Program
+                      </span>
+                    )}
+                  </div>
 
-          {/* Home care */}
-          <div className="flex flex-col gap-8 rounded-4xl border border-line bg-sky p-8 sm:p-10 lg:flex-row lg:items-center">
-            <div className="flex shrink-0 flex-col items-start gap-3 lg:w-56">
-              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-navy">
-                <HomeIcon className="h-7 w-7" strokeWidth={1.6} aria-hidden="true" />
+                  <div className="flex flex-col gap-2">
+                    <h2
+                      className={`font-serif-display text-xl ${
+                        service.featured ? "text-white" : "text-ink"
+                      }`}
+                    >
+                      {service.name}
+                    </h2>
+                    <p
+                      className={`text-sm leading-relaxed ${
+                        service.featured ? "text-white/70" : "text-slate-600"
+                      }`}
+                    >
+                      {service.short}
+                    </p>
+                  </div>
+
+                  <ul className="flex flex-col gap-2.5">
+                    {service.bullets.map((bullet) => (
+                      <li
+                        key={bullet}
+                        className={`flex items-start gap-2.5 text-sm leading-relaxed ${
+                          service.featured ? "text-white/80" : "text-slate-600"
+                        }`}
+                      >
+                        <CheckCircle2
+                          className={`mt-0.5 h-4 w-4 shrink-0 ${
+                            service.featured ? "text-gold-soft" : "text-blue"
+                          }`}
+                          strokeWidth={1.8}
+                          aria-hidden="true"
+                        />
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+
+            {/* Home care */}
+            <div className="flex flex-col gap-5 rounded-4xl border border-line bg-sky p-7 sm:col-span-2 lg:col-span-1">
+              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-navy">
+                <HomeIcon className="h-6 w-6" strokeWidth={1.75} aria-hidden="true" />
               </span>
-              <span className="text-xs font-semibold uppercase tracking-[0.14em] text-navy/60">
-                Also Available
-              </span>
+              <div className="flex flex-col gap-2">
+                <h2 className="font-serif-display text-xl text-ink">
+                  {homeCare.title}
+                </h2>
+                <p className="text-sm leading-relaxed text-slate-600">
+                  {homeCare.description}
+                </p>
+              </div>
+              <Button href={site.phoneHref} variant="primary" className="mt-auto w-fit">
+                <Phone className="h-4 w-4" strokeWidth={2} />
+                Call to Learn More
+              </Button>
             </div>
-            <div className="flex flex-col gap-3">
-              <h2 className="font-serif-display text-2xl text-ink sm:text-3xl">
-                {homeCare.title}
-              </h2>
-              <p className="max-w-2xl text-base leading-relaxed text-slate-600">
-                {homeCare.description}
-              </p>
-            </div>
-            <Button href={site.phoneHref} variant="primary" className="shrink-0">
-              <Phone className="h-4 w-4" strokeWidth={2} />
-              Call to Learn More
-            </Button>
           </div>
         </Container>
       </section>
 
-      <section className="pb-20 sm:pb-24">
+      {/* Why choose us */}
+      <section className="bg-mist py-20 sm:py-24">
+        <Container className="flex flex-col gap-12">
+          <SectionHeading
+            eyebrow="Why Choose Mankind Care"
+            title="What you can count on, every time."
+            align="center"
+            className="mx-auto"
+          />
+          <CommitmentsGrid />
+        </Container>
+      </section>
+
+      <section className="py-20 sm:py-24">
         <Container className="flex flex-col items-center gap-6 rounded-4xl bg-mist p-10 text-center sm:p-14">
           <h2 className="font-serif-display max-w-xl text-2xl text-ink sm:text-3xl">
             Not sure which service is the right fit?

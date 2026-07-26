@@ -46,6 +46,7 @@ export type Service = {
     | "network";
   short: string;
   description: string;
+  bullets: [string, string, string];
   featured?: boolean;
 };
 
@@ -57,6 +58,11 @@ export const services: Service[] = [
     short: "Our flagship day program of structured, meaningful daily activity.",
     description:
       "Our Adult Day Habilitation program gives individuals a warm, structured place to build skills and enjoy their day. Every visit blends learning, activity, and genuine connection, guided by caregivers who take the time to understand each person they support.",
+    bullets: [
+      "Structured daily programming built around real goals",
+      "A warm, consistent group setting with caring staff",
+      "Skill building blended with genuine social connection",
+    ],
     featured: true,
   },
   {
@@ -66,6 +72,11 @@ export const services: Service[] = [
     short: "Trusted short term relief so families can rest and recharge.",
     description:
       "Caregiving is demanding work, and everyone deserves a break. Our respite care gives families peace of mind, with trained staff who step in and provide the same quality of care and attention your loved one receives every day.",
+    bullets: [
+      "Short term relief for family caregivers",
+      "Trained staff who match your loved one's routine",
+      "Available when your family needs a break",
+    ],
   },
   {
     slug: "individual-support",
@@ -74,6 +85,11 @@ export const services: Service[] = [
     short: "One on one support built around a person's specific goals.",
     description:
       "Every person we support has different needs and different goals. Our individual support services are tailored around the person, not a program, so progress looks like real life: more independence, more confidence, and more comfort in daily routines.",
+    bullets: [
+      "One on one attention built around personal goals",
+      "Support that adapts as needs change",
+      "Focused on real, everyday progress",
+    ],
   },
   {
     slug: "community-based-support",
@@ -82,6 +98,11 @@ export const services: Service[] = [
     short: "Guided support that extends into everyday community settings.",
     description:
       "We help individuals participate confidently in the community around them, from errands and appointments to everyday routines outside the home. Our team provides the guidance and encouragement needed to move through daily life with independence.",
+    bullets: [
+      "Guided support for errands and appointments",
+      "Confidence building in everyday settings",
+      "Encouragement toward greater independence",
+    ],
   },
   {
     slug: "community-inclusion",
@@ -90,6 +111,11 @@ export const services: Service[] = [
     short: "Real participation in community life, not just a visit.",
     description:
       "We believe everyone belongs in the life of their community. Community Inclusion connects individuals to local activities, events, and relationships, building a genuine sense of belonging well beyond our doors.",
+    bullets: [
+      "Connection to local activities and events",
+      "Relationship building beyond our doors",
+      "A genuine sense of belonging",
+    ],
   },
   {
     slug: "prevocational-training",
@@ -98,6 +124,11 @@ export const services: Service[] = [
     short: "Foundational work skills that prepare people for employment.",
     description:
       "Before a first job comes preparation. Our prevocational training builds the everyday work habits, routines, and confidence that make the step into employment feel achievable and within reach.",
+    bullets: [
+      "Everyday work habits and routines",
+      "Confidence for the workplace",
+      "Preparation before the first job",
+    ],
   },
   {
     slug: "supported-employment",
@@ -106,6 +137,11 @@ export const services: Service[] = [
     short: "Hands on coaching toward real, paid work in the community.",
     description:
       "We walk alongside individuals as they pursue paid employment, offering coaching and encouragement on the job. The goal is steady, meaningful work and the independence and pride that comes with it.",
+    bullets: [
+      "Hands on coaching on the job",
+      "Support toward paid, meaningful work",
+      "Steady encouragement every step of the way",
+    ],
   },
   {
     slug: "behavior-management",
@@ -114,6 +150,11 @@ export const services: Service[] = [
     short: "Thoughtful, individualized strategies for lasting progress.",
     description:
       "Our team works closely with individuals and families to understand behavior, build coping strategies, and support steady, positive progress. Every plan is personal, practical, and grounded in respect.",
+    bullets: [
+      "Individualized, respectful strategies",
+      "Close work with individuals and families",
+      "Steady, measurable progress over time",
+    ],
   },
   {
     slug: "career-planning",
@@ -122,6 +163,11 @@ export const services: Service[] = [
     short: "Clear, personalized roadmaps toward long term career goals.",
     description:
       "We help individuals think beyond today and plan for tomorrow, mapping out realistic steps toward the career and future they want. It is guidance that grows with the person as their goals evolve.",
+    bullets: [
+      "Clear, realistic roadmaps",
+      "Goals that grow with the person",
+      "Guidance focused on long term success",
+    ],
   },
   {
     slug: "natural-supports-training",
@@ -130,6 +176,11 @@ export const services: Service[] = [
     short: "Strengthening the everyday people and relationships around you.",
     description:
       "Family, friends, and neighbors are often the strongest support network a person has. We train and equip these natural supports so care and encouragement continue well beyond scheduled program hours.",
+    bullets: [
+      "Equipping family, friends, and neighbors",
+      "Support that continues beyond program hours",
+      "A stronger everyday care network",
+    ],
   },
 ];
 
@@ -157,6 +208,27 @@ export const topQuestions = [
     question: "Is there a variety of activities?",
     answer:
       "Every day includes a mix of skill building and activity: problem solving, social time, daily living practice, and leisure, so no two days feel the same.",
+  },
+] as const;
+
+export const commitments = [
+  {
+    icon: "car",
+    title: "Reliable transportation",
+    description:
+      "Getting to and from our program is arranged and coordinated, so families never have to worry about the logistics of a visit.",
+  },
+  {
+    icon: "shield",
+    title: "Qualified, caring staff",
+    description:
+      "Every caregiver on our team is trained and genuinely invested in the comfort and wellbeing of the people they support.",
+  },
+  {
+    icon: "activity",
+    title: "A real variety of activities",
+    description:
+      "No two days look the same. Programming blends skill building with recreation, so every visit feels worthwhile.",
   },
 ] as const;
 
