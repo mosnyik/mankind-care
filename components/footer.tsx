@@ -90,11 +90,27 @@ export default function Footer() {
       </Container>
 
       <div className="border-t border-white/10">
-        <Container className="flex flex-col items-center justify-between gap-3 py-6 text-xs text-white/40 sm:flex-row">
+        <Container className="flex flex-col items-center justify-between gap-2 py-6 text-xs text-white/40 sm:flex-row">
           <p>
             &copy; {year} {site.name}. All rights reserved.
           </p>
-          <p>Newark, New Jersey</p>
+          <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+            <span>Newark, New Jersey</span>
+            <span aria-hidden="true">&middot;</span>
+            <span>
+              Developed by{" "}
+              <a
+                href="https://wa.me/2349076407315"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-white/60 transition-colors hover:text-gold-soft"
+              >
+                Zorex Tech
+              </a>
+            </span>
+            <span aria-hidden="true">&middot;</span>
+            <span>WhatsApp: +234 907 640 7315 &middot; +234 806 368 6295</span>
+          </p>
         </Container>
       </div>
     </footer>
