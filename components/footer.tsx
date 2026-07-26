@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Container from "@/components/container";
 import Logo from "@/components/logo";
@@ -6,6 +9,9 @@ import { navLinks, services, site } from "@/lib/site";
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const pathname = usePathname();
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
     <footer className="border-t border-line bg-ink text-white/70">
@@ -23,15 +29,21 @@ export default function Footer() {
           <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-white">
             Explore
           </h3>
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm text-white/60 transition-colors hover:text-gold-soft"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const active = isActive(link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={active ? "page" : undefined}
+                className={`text-sm transition-colors hover:text-gold-soft ${
+                  active ? "font-semibold text-gold-soft" : "text-white/60"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
 
         <div className="flex flex-col gap-3">
@@ -49,6 +61,7 @@ export default function Footer() {
           ))}
           <Link
             href="/services"
+            aria-current={isActive("/services") ? "page" : undefined}
             className="text-sm font-medium text-gold-soft transition-colors hover:text-white"
           >
             View all services
