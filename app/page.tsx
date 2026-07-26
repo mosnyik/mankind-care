@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   Phone,
   ArrowRight,
@@ -28,7 +27,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden bg-mist">
         <div
-          className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[640px]"
+          className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-160"
           style={{
             backgroundImage:
               "radial-gradient(circle at 18% 15%, rgba(36,84,199,0.14), transparent 42%), radial-gradient(circle at 82% 0%, rgba(182,137,58,0.16), transparent 40%)",
@@ -78,7 +77,7 @@ export default function Home() {
           </div>
 
           <div className="relative animate-fade-in">
-            <div className="relative overflow-hidden rounded-[2rem] bg-linear-to-br from-navy via-navy to-ink p-9 shadow-[0_40px_90px_-30px_rgba(10,24,48,0.45)] sm:p-11">
+            <div className="relative overflow-hidden rounded-4xl bg-linear-to-br from-navy via-navy to-ink p-9 shadow-[0_40px_90px_-30px_rgba(10,24,48,0.45)] sm:p-11">
               <div
                 className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-blue-light/20 blur-3xl"
                 aria-hidden="true"
@@ -166,7 +165,7 @@ export default function Home() {
       {/* Home care callout */}
       <section className="py-20 sm:py-24">
         <Container>
-          <div className="grid gap-10 rounded-[2rem] border border-line bg-white p-9 shadow-[0_30px_80px_-40px_rgba(18,41,79,0.2)] sm:p-12 lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-14">
+          <div className="grid gap-10 rounded-4xl border border-line bg-white p-9 shadow-[0_30px_80px_-40px_rgba(18,41,79,0.2)] sm:p-12 lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-14">
             <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-sky text-navy">
               <HomeIcon className="h-8 w-8" strokeWidth={1.6} aria-hidden="true" />
             </span>
