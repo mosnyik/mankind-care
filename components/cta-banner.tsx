@@ -31,11 +31,7 @@ export default function CtaBanner() {
             <Phone className="h-4 w-4" strokeWidth={2} />
             Call {site.phone}
           </Button>
-          <Button
-            href="/contact"
-            variant="outline"
-            className="border-white/25 bg-transparent text-white hover:bg-white/10 hover:border-white/40"
-          >
+          <Button href="/contact" variant="outline-light">
             <MessageSquare className="h-4 w-4" strokeWidth={2} />
             Send a Message
           </Button>
