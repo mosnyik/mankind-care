@@ -13,6 +13,7 @@ import SectionHeading from "@/components/section-heading";
 import ServiceCard from "@/components/service-card";
 import ValueCard from "@/components/value-card";
 import CtaBanner from "@/components/cta-banner";
+import PhotoQuoteCard from "@/components/photo-quote-card";
 import {
   coreSkills,
   homeCare,
@@ -20,6 +21,7 @@ import {
   site,
   topQuestions,
 } from "@/lib/site";
+import { heroImages } from "@/lib/images";
 
 export default function Home() {
   return (
@@ -77,46 +79,13 @@ export default function Home() {
           </div>
 
           <div className="relative animate-fade-in">
-            <div className="relative overflow-hidden rounded-4xl bg-linear-to-br from-navy via-navy to-ink p-9 shadow-[0_40px_90px_-30px_rgba(10,24,48,0.45)] sm:p-11">
-              <div
-                className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-blue-light/20 blur-3xl"
-                aria-hidden="true"
-              />
-              <div
-                className="pointer-events-none absolute -bottom-20 -left-10 h-56 w-56 rounded-full bg-gold/20 blur-3xl"
-                aria-hidden="true"
-              />
-              <div className="relative flex flex-col gap-8">
-                <p className="font-serif-display text-2xl italic leading-snug text-white sm:text-3xl">
-                  &ldquo;Our service sets us apart. We render quality care
-                  that makes our clients comfortable.&rdquo;
-                </p>
-                <div className="flex flex-wrap gap-2.5">
-                  {coreSkills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-medium text-white/80"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-                <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-7">
-                  <div>
-                    <p className="font-serif-display text-3xl text-white">10</p>
-                    <p className="text-xs uppercase tracking-wide text-white/50">
-                      Support Services
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-serif-display text-3xl text-white">1:1</p>
-                    <p className="text-xs uppercase tracking-wide text-white/50">
-                      Personalized Care
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <PhotoQuoteCard
+              src={heroImages.home.src}
+              alt={heroImages.home.alt}
+              quote="Our service sets us apart. We render quality care that makes our clients comfortable."
+              skills={coreSkills}
+              badgeLabel="10 Support Services"
+            />
           </div>
         </Container>
       </section>

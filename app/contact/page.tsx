@@ -3,7 +3,9 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Container from "@/components/container";
 import SectionHeading from "@/components/section-heading";
 import ContactForm from "@/components/contact-form";
+import HeroPhotoBanner from "@/components/hero-photo-banner";
 import { site } from "@/lib/site";
+import { heroImages } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -52,13 +54,18 @@ export default function ContactPage() {
           }}
           aria-hidden="true"
         />
-        <Container>
+        <Container className="flex flex-col gap-12">
           <SectionHeading
             eyebrow="Contact Us"
             title="Let's talk about the care you need."
             description="Call us directly for the fastest response, or send a message below and we will get back to you shortly."
             align="center"
             className="mx-auto"
+          />
+          <HeroPhotoBanner
+            src={heroImages.contact.src}
+            alt={heroImages.contact.alt}
+            className="h-64 sm:h-80"
           />
         </Container>
       </section>
@@ -108,7 +115,7 @@ export default function ContactPage() {
             <iframe
               title="Mankind Care LLC location map"
               src={site.mapEmbedSrc}
-              className="h-96 w-full grayscale-[15%]"
+              className="h-96 w-full grayscale-15"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />

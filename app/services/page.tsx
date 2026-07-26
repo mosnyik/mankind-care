@@ -11,8 +11,10 @@ import Button from "@/components/button";
 import SectionHeading from "@/components/section-heading";
 import CtaBanner from "@/components/cta-banner";
 import CommitmentsGrid from "@/components/commitments-grid";
+import HeroPhotoBanner from "@/components/hero-photo-banner";
 import { serviceIconMap } from "@/components/icons";
 import { homeCare, services } from "@/lib/site";
+import { heroImages } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Our Services",
@@ -35,13 +37,18 @@ export default function ServicesPage() {
           }}
           aria-hidden="true"
         />
-        <Container>
+        <Container className="flex flex-col gap-12">
           <SectionHeading
             eyebrow="Our Services"
             title="Ten ways we help people live with more independence."
             description="Every program is designed around a simple idea: quality care should build real skills, real confidence, and real connection. Explore the full range of services offered by Mankind Care LLC."
             align="center"
             className="mx-auto"
+          />
+          <HeroPhotoBanner
+            src={heroImages.services.src}
+            alt={heroImages.services.alt}
+            className="h-72 sm:h-96"
           />
         </Container>
       </section>

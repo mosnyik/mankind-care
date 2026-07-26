@@ -7,8 +7,10 @@ import Button from "@/components/button";
 import CtaBanner from "@/components/cta-banner";
 import GetStartedSteps from "@/components/get-started-steps";
 import RelatedServices from "@/components/related-services";
+import HeroPhotoBanner from "@/components/hero-photo-banner";
 import { serviceIconMap } from "@/components/icons";
 import { getServiceBySlug, services, site } from "@/lib/site";
+import { serviceImages } from "@/lib/images";
 
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
@@ -94,6 +96,12 @@ export default async function ServiceDetailPage({
               </Button>
             </div>
           </div>
+
+          <HeroPhotoBanner
+            src={serviceImages[service.slug].src}
+            alt={serviceImages[service.slug].alt}
+            className="h-64 sm:h-80"
+          />
         </Container>
       </section>
 

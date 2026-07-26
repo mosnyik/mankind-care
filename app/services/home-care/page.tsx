@@ -7,7 +7,9 @@ import CtaBanner from "@/components/cta-banner";
 import GetStartedSteps from "@/components/get-started-steps";
 import SectionHeading from "@/components/section-heading";
 import ServiceCard from "@/components/service-card";
+import HeroPhotoBanner from "@/components/hero-photo-banner";
 import { homeCare, services, site } from "@/lib/site";
+import { serviceImages } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: homeCare.title,
@@ -58,6 +60,12 @@ export default function HomeCarePage() {
               </Button>
             </div>
           </div>
+
+          <HeroPhotoBanner
+            src={serviceImages["home-care"].src}
+            alt={serviceImages["home-care"].alt}
+            className="h-64 sm:h-80"
+          />
         </Container>
       </section>
 

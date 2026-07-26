@@ -4,7 +4,9 @@ import Container from "@/components/container";
 import SectionHeading from "@/components/section-heading";
 import CtaBanner from "@/components/cta-banner";
 import CommitmentsGrid from "@/components/commitments-grid";
+import PhotoQuoteCard from "@/components/photo-quote-card";
 import { coreSkills, site } from "@/lib/site";
+import { heroImages } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -42,23 +44,12 @@ export default function AboutPage() {
               comfortable, respected, and capable of more.
             </p>
           </div>
-          <div className="rounded-4xl border border-line bg-white p-9 shadow-[0_30px_80px_-40px_rgba(18,41,79,0.2)]">
-            <p className="font-serif-display text-xl italic leading-relaxed text-ink">
-              &ldquo;Our service sets us apart. We render quality care to our
-              clients that makes them comfortable, and we help build the
-              skills they need for everyday life.&rdquo;
-            </p>
-            <div className="mt-7 flex flex-wrap gap-2.5">
-              {coreSkills.map((skill) => (
-                <span
-                  key={skill}
-                  className="rounded-full bg-sky px-3.5 py-1.5 text-xs font-medium text-navy"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
+          <PhotoQuoteCard
+            src={heroImages.about.src}
+            alt={heroImages.about.alt}
+            quote="Our service sets us apart. We render quality care to our clients that makes them comfortable, and we help build the skills they need for everyday life."
+            skills={coreSkills}
+          />
         </Container>
       </section>
 
