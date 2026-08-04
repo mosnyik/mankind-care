@@ -75,15 +75,15 @@ export default function ContactPage() {
           <div className="flex flex-col gap-5">
             {infoCards.map((card) => {
               const content = (
-                <div className="flex items-start gap-4 rounded-3xl border border-line bg-white p-6 transition-colors hover:border-navy/20">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-sky text-navy">
+                <div className="flex items-start gap-4 rounded-3xl border border-line bg-white p-6 transition-colors hover:border-primary/20">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary-surface text-primary">
                     <card.icon className="h-5 w-5" strokeWidth={1.8} aria-hidden="true" />
                   </span>
                   <div className="flex flex-col gap-1">
                     <span className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-400">
                       {card.label}
                     </span>
-                    <span className="text-sm font-medium text-ink">
+                    <span className="text-sm font-medium text-primary-dark">
                       {card.value}
                     </span>
                   </div>

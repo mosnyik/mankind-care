@@ -14,7 +14,7 @@ export default function Footer() {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <footer className="border-t border-line bg-ink text-white/70">
+    <footer className="border-t border-line bg-primary-dark text-white/70">
       <Container className="grid gap-12 py-16 lg:grid-cols-[1.2fr_1fr_1fr_1.1fr]">
         <div className="flex flex-col gap-4">
           <Logo light />

@@ -65,7 +65,7 @@ export default function ServicesPage() {
                   id={service.slug}
                   className={`flex scroll-mt-32 flex-col gap-5 rounded-4xl border p-7 ${
                     service.featured
-                      ? "border-gold/30 bg-linear-to-br from-navy to-ink text-white lg:col-span-2"
+                      ? "border-gold/30 bg-linear-to-br from-primary to-primary-dark text-white lg:col-span-2"
                       : "border-line bg-white"
                   }`}
                 >
@@ -74,7 +74,7 @@ export default function ServicesPage() {
                       className={`flex h-12 w-12 items-center justify-center rounded-2xl ${
                         service.featured
                           ? "bg-white/10 text-gold-soft"
-                          : "bg-sky text-navy"
+                          : "bg-primary-surface text-primary"
                       }`}
                     >
                       <Icon className="h-6 w-6" strokeWidth={1.75} aria-hidden="true" />
@@ -89,7 +89,7 @@ export default function ServicesPage() {
                   <div className="flex flex-col gap-2">
                     <h2
                       className={`font-serif-display text-xl ${
-                        service.featured ? "text-white" : "text-ink"
+                        service.featured ? "text-white" : "text-primary-dark"
                       }`}
                     >
                       {service.name}
@@ -113,7 +113,7 @@ export default function ServicesPage() {
                       >
                         <CheckCircle2
                           className={`mt-0.5 h-4 w-4 shrink-0 ${
-                            service.featured ? "text-gold-soft" : "text-blue"
+                            service.featured ? "text-gold-soft" : "text-primary-accent"
                           }`}
                           strokeWidth={1.8}
                           aria-hidden="true"
@@ -126,7 +126,7 @@ export default function ServicesPage() {
                   <Link
                     href={`/services/${service.slug}`}
                     className={`group mt-auto inline-flex w-fit items-center gap-1.5 text-sm font-semibold ${
-                      service.featured ? "text-gold-soft" : "text-navy"
+                      service.featured ? "text-gold-soft" : "text-primary"
                     }`}
                   >
                     Learn more
@@ -140,12 +140,12 @@ export default function ServicesPage() {
             })}
 
             {/* Home care */}
-            <div className="flex flex-col gap-5 rounded-4xl border border-line bg-sky p-7 sm:col-span-2 lg:col-span-1">
-              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-navy">
+            <div className="flex flex-col gap-5 rounded-4xl border border-line bg-primary-surface p-7 sm:col-span-2 lg:col-span-1">
+              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-primary">
                 <HomeIcon className="h-6 w-6" strokeWidth={1.75} aria-hidden="true" />
               </span>
               <div className="flex flex-col gap-2">
-                <h2 className="font-serif-display text-xl text-ink">
+                <h2 className="font-serif-display text-xl text-primary-dark">
                   {homeCare.title}
                 </h2>
                 <p className="text-sm leading-relaxed text-slate-600">
@@ -154,7 +154,7 @@ export default function ServicesPage() {
               </div>
               <Link
                 href="/services/home-care"
-                className="group mt-auto inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-navy"
+                className="group mt-auto inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-primary"
               >
                 Learn more
                 <ArrowUpRight
@@ -182,7 +182,7 @@ export default function ServicesPage() {
 
       <section className="py-20 sm:py-24">
         <Container className="flex flex-col items-center gap-6 rounded-4xl bg-mist p-10 text-center sm:p-14">
-          <h2 className="font-serif-display max-w-xl text-2xl text-ink sm:text-3xl">
+          <h2 className="font-serif-display max-w-xl text-2xl text-primary-dark sm:text-3xl">
             Not sure which service is the right fit?
           </h2>
           <p className="max-w-lg text-base leading-relaxed text-slate-600">

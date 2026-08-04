@@ -51,7 +51,7 @@ export default function ContactForm() {
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="flex flex-col gap-2">
-          <label htmlFor="name" className="text-sm font-medium text-ink">
+          <label htmlFor="name" className="text-sm font-medium text-primary-dark">
             Full name
           </label>
           <input
@@ -60,12 +60,12 @@ export default function ContactForm() {
             type="text"
             required
             autoComplete="name"
-            className="rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-slate-400 focus:border-blue focus:ring-2 focus:ring-blue/20"
+            className="rounded-xl border border-line bg-white px-4 py-3 text-sm text-primary-dark outline-none transition-colors placeholder:text-slate-400 focus:border-primary-accent focus:ring-2 focus:ring-primary-accent/20"
             placeholder="Jane Doe"
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label htmlFor="phone" className="text-sm font-medium text-ink">
+          <label htmlFor="phone" className="text-sm font-medium text-primary-dark">
             Phone number
           </label>
           <input
@@ -73,14 +73,14 @@ export default function ContactForm() {
             name="phone"
             type="tel"
             autoComplete="tel"
-            className="rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-slate-400 focus:border-blue focus:ring-2 focus:ring-blue/20"
+            className="rounded-xl border border-line bg-white px-4 py-3 text-sm text-primary-dark outline-none transition-colors placeholder:text-slate-400 focus:border-primary-accent focus:ring-2 focus:ring-primary-accent/20"
             placeholder="(555) 555-5555"
           />
         </div>
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="email" className="text-sm font-medium text-ink">
+        <label htmlFor="email" className="text-sm font-medium text-primary-dark">
           Email address
         </label>
         <input
@@ -89,20 +89,20 @@ export default function ContactForm() {
           type="email"
           required
           autoComplete="email"
-          className="rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-slate-400 focus:border-blue focus:ring-2 focus:ring-blue/20"
+          className="rounded-xl border border-line bg-white px-4 py-3 text-sm text-primary-dark outline-none transition-colors placeholder:text-slate-400 focus:border-primary-accent focus:ring-2 focus:ring-primary-accent/20"
           placeholder="you@email.com"
         />
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="interest" className="text-sm font-medium text-ink">
+        <label htmlFor="interest" className="text-sm font-medium text-primary-dark">
           I am interested in
         </label>
         <select
           id="interest"
           name="interest"
           defaultValue={interestOptions[0]}
-          className="rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-blue focus:ring-2 focus:ring-blue/20"
+          className="rounded-xl border border-line bg-white px-4 py-3 text-sm text-primary-dark outline-none transition-colors focus:border-primary-accent focus:ring-2 focus:ring-primary-accent/20"
         >
           {interestOptions.map((option) => (
             <option key={option} value={option}>
@@ -113,7 +113,7 @@ export default function ContactForm() {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="message" className="text-sm font-medium text-ink">
+        <label htmlFor="message" className="text-sm font-medium text-primary-dark">
           Message
         </label>
         <textarea
@@ -121,7 +121,7 @@ export default function ContactForm() {
           name="message"
           required
           rows={5}
-          className="resize-none rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-slate-400 focus:border-blue focus:ring-2 focus:ring-blue/20"
+          className="resize-none rounded-xl border border-line bg-white px-4 py-3 text-sm text-primary-dark outline-none transition-colors placeholder:text-slate-400 focus:border-primary-accent focus:ring-2 focus:ring-primary-accent/20"
           placeholder="Tell us a little about who needs care and how we can help."
         />
       </div>
@@ -137,7 +137,7 @@ export default function ContactForm() {
         </p>
       </div>
       {status === "ready" && (
-        <p className="text-sm font-medium text-navy" role="status">
+        <p className="text-sm font-medium text-primary" role="status">
           Almost done. Send the email that just opened and we will get back
           to you soon.
         </p>

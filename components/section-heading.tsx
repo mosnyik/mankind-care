@@ -27,7 +27,7 @@ export default function SectionHeading({
           className={`inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] ${
             isLight
               ? "border-white/20 text-gold-soft"
-              : "border-line bg-sky text-navy"
+              : "border-line bg-primary-surface text-primary"
           }`}
         >
           {eyebrow}
@@ -35,7 +35,7 @@ export default function SectionHeading({
       )}
       <h2
         className={`font-serif-display text-3xl leading-[1.15] sm:text-4xl lg:text-5xl ${
-          isLight ? "text-white" : "text-ink"
+          isLight ? "text-white" : "text-primary-dark"
         } ${isCenter ? "max-w-2xl" : "max-w-xl"}`}
       >
         {title}

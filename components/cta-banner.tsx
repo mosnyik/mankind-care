@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 
 export default function CtaBanner() {
   return (
-    <section className="relative overflow-hidden bg-ink py-20 sm:py-24">
+    <section className="relative overflow-hidden bg-primary-dark py-20 sm:py-24">
       <div
         className="pointer-events-none absolute inset-0 opacity-40"
         style={{

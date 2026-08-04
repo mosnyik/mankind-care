@@ -38,13 +38,13 @@ export default function Home() {
         />
         <Container className="relative grid gap-14 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-28">
           <div className="flex flex-col items-start gap-7 animate-fade-up">
-            <span className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-navy">
+            <span className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
               <Sparkles className="h-3.5 w-3.5 text-gold" strokeWidth={2} />
               DDD &amp; Home Care Provider, Newark NJ
             </span>
-            <h1 className="font-serif-display text-4xl leading-[1.08] text-ink sm:text-5xl lg:text-6xl">
+            <h1 className="font-serif-display text-4xl leading-[1.08] text-primary-dark sm:text-5xl lg:text-6xl">
               Care that helps people{" "}
-              <span className="text-blue">thrive</span>, every single day.
+              <span className="text-primary-accent">thrive</span>, every single day.
             </h1>
             <p className="max-w-lg text-lg leading-relaxed text-slate-600">
               Mankind Care LLC delivers quality adult day habilitation and
@@ -64,15 +64,15 @@ export default function Home() {
 
             <div className="mt-4 grid w-full max-w-lg grid-cols-1 gap-3 border-t border-line pt-6 sm:grid-cols-3">
               <div className="flex items-center gap-2.5">
-                <Clock className="h-4 w-4 shrink-0 text-navy" strokeWidth={1.8} />
+                <Clock className="h-4 w-4 shrink-0 text-primary" strokeWidth={1.8} />
                 <span className="text-sm text-slate-600">{site.hoursShort}</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <MapPin className="h-4 w-4 shrink-0 text-navy" strokeWidth={1.8} />
+                <MapPin className="h-4 w-4 shrink-0 text-primary" strokeWidth={1.8} />
                 <span className="text-sm text-slate-600">Newark, NJ</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <ShieldCheck className="h-4 w-4 shrink-0 text-navy" strokeWidth={1.8} />
+                <ShieldCheck className="h-4 w-4 shrink-0 text-primary" strokeWidth={1.8} />
                 <span className="text-sm text-slate-600">10 Support Services</span>
               </div>
             </div>
@@ -135,11 +135,11 @@ export default function Home() {
       <section className="py-20 sm:py-24">
         <Container>
           <div className="grid gap-10 rounded-4xl border border-line bg-white p-9 shadow-[0_30px_80px_-40px_rgba(26,67,191,0.2)] sm:p-12 lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-14">
-            <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-sky text-navy">
+            <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-surface text-primary">
               <HomeIcon className="h-8 w-8" strokeWidth={1.6} aria-hidden="true" />
             </span>
             <div className="flex flex-col gap-3">
-              <h2 className="font-serif-display text-2xl text-ink sm:text-3xl">
+              <h2 className="font-serif-display text-2xl text-primary-dark sm:text-3xl">
                 {homeCare.title}
               </h2>
               <p className="max-w-2xl text-base leading-relaxed text-slate-600">

@@ -7,7 +7,7 @@ export default function Logo({ light = false }: { light?: boolean }) {
       className="group flex items-center gap-3"
       aria-label="Mankind Care, home"
     >
-      <span className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-navy transition-transform duration-200 group-hover:scale-105">
+      <span className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary transition-transform duration-200 group-hover:scale-105">
         <svg
           viewBox="0 0 24 24"
           className="h-5 w-5 text-gold-soft"
@@ -22,7 +22,7 @@ export default function Logo({ light = false }: { light?: boolean }) {
         </svg>
       </span>
       <span
-        className={`font-serif-display text-lg leading-tight ${light ? "text-white" : "text-ink"}`}
+        className={`font-serif-display text-lg leading-tight ${light ? "text-white" : "text-primary-dark"}`}
       >
         Mankind Care
         <span

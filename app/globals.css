@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --color-ink: #102978;
-  --color-navy: #1a43bf;
-  --color-navy-soft: #315bd1;
-  --color-blue: #2d58d0;
-  --color-blue-light: #7393ee;
-  --color-sky: #eff3ff;
+  --color-primary-dark: #102978;
+  --color-primary: #1a43bf;
+  --color-primary-light: #315bd1;
+  --color-primary-accent: #2d58d0;
+  --color-primary-accent-light: #7393ee;
+  --color-primary-surface: #eff3ff;
   --color-mist: #f6f7fb;
   --color-gold: #b6893a;
   --color-gold-soft: #e7d3a8;
@@ -18,12 +18,12 @@
 }
 
 @theme inline {
-  --color-ink: var(--color-ink);
-  --color-navy: var(--color-navy);
-  --color-navy-soft: var(--color-navy-soft);
-  --color-blue: var(--color-blue);
-  --color-blue-light: var(--color-blue-light);
-  --color-sky: var(--color-sky);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-primary: var(--color-primary);
+  --color-primary-light: var(--color-primary-light);
+  --color-primary-accent: var(--color-primary-accent);
+  --color-primary-accent-light: var(--color-primary-accent-light);
+  --color-primary-surface: var(--color-primary-surface);
   --color-mist: var(--color-mist);
   --color-gold: var(--color-gold);
   --color-gold-soft: var(--color-gold-soft);
@@ -70,7 +70,7 @@ body {
 
 ::selection {
   background: var(--color-gold-soft);
-  color: var(--color-ink);
+  color: var(--color-primary-dark);
 }
 
 .font-serif-display {

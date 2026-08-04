@@ -21,7 +21,7 @@ export default function HeroPhotoBanner({
         className="object-cover"
         priority={priority}
       />
-      <div className="absolute inset-0 bg-linear-to-t from-ink/45 via-ink/5 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-primary-dark/45 via-primary-dark/5 to-transparent" />
     </div>
   );
 }

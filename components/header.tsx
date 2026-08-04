@@ -36,7 +36,7 @@ export default function Header() {
 
   return (
     <div className="sticky top-0 z-50">
-      <div className="hidden bg-ink text-white/80 lg:block">
+      <div className="hidden bg-primary-dark text-white/80 lg:block">
         <Container className="flex items-center justify-between py-2 text-xs">
           <div className="flex items-center gap-6">
             <span className="inline-flex items-center gap-1.5">
@@ -81,8 +81,8 @@ export default function Header() {
                   href={link.href}
                   className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                     active
-                      ? "bg-sky text-navy"
-                      : "text-slate-600 hover:text-navy hover:bg-sky"
+                      ? "bg-primary-surface text-primary"
+                      : "text-slate-600 hover:text-primary hover:bg-primary-surface"
                   }`}
                 >
                   {link.label}
@@ -101,7 +101,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMenuOpen((v) => !v)}
-            className="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-full text-navy hover:bg-sky lg:hidden"
+            className="inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-full text-primary hover:bg-primary-surface lg:hidden"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
           >
@@ -127,7 +127,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   className={`rounded-xl px-4 py-3 text-base font-medium transition-colors ${
-                    active ? "bg-sky text-navy" : "text-slate-600 hover:bg-sky hover:text-navy"
+                    active ? "bg-primary-surface text-primary" : "text-slate-600 hover:bg-primary-surface hover:text-primary"
                   }`}
                 >
                   {link.label}
@@ -142,7 +142,7 @@ export default function Header() {
                 {site.email}
               </a>
               <span className="inline-flex items-center gap-1.5 text-sm text-slate-600">
-                <Clock className="h-4 w-4 text-navy" strokeWidth={1.8} />
+                <Clock className="h-4 w-4 text-primary" strokeWidth={1.8} />
                 {site.hours}
               </span>
               <Button href={site.phoneHref} variant="gold" className="w-full">

@@ -26,14 +26,14 @@ export default function RelatedServices({
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}
-              className="group flex flex-col gap-4 rounded-3xl border border-line bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-navy/20 hover:shadow-[0_24px_60px_-28px_rgba(26,67,191,0.25)]"
+              className="group flex flex-col gap-4 rounded-3xl border border-line bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-[0_24px_60px_-28px_rgba(26,67,191,0.25)]"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-sky text-navy">
+              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-surface text-primary">
                 <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />
               </span>
-              <h3 className="font-serif-display text-lg text-ink">{service.name}</h3>
+              <h3 className="font-serif-display text-lg text-primary-dark">{service.name}</h3>
               <p className="text-sm leading-relaxed text-slate-600">{service.short}</p>
-              <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-navy">
+              <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-primary">
                 Learn more
                 <ArrowUpRight
                   className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

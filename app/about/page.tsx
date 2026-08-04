@@ -31,10 +31,10 @@ export default function AboutPage() {
         />
         <Container className="grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-center">
           <div className="flex flex-col gap-6">
-            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-line bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-navy">
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-line bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
               About Mankind Care
             </span>
-            <h1 className="font-serif-display text-4xl leading-[1.1] text-ink sm:text-5xl">
+            <h1 className="font-serif-display text-4xl leading-[1.1] text-primary-dark sm:text-5xl">
               Care is not just what we do. It is who we are.
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-slate-600">
@@ -64,10 +64,10 @@ export default function AboutPage() {
           />
           <div className="grid gap-6 sm:grid-cols-2">
             <div className="flex flex-col gap-4 rounded-3xl border border-line bg-white p-8">
-              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky text-navy">
+              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-surface text-primary">
                 <Users className="h-6 w-6" strokeWidth={1.75} aria-hidden="true" />
               </span>
-              <h3 className="font-serif-display text-xl text-ink">
+              <h3 className="font-serif-display text-xl text-primary-dark">
                 DDD Clients
               </h3>
               <p className="text-sm leading-relaxed text-slate-600">
@@ -78,10 +78,10 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="flex flex-col gap-4 rounded-3xl border border-line bg-white p-8">
-              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky text-navy">
+              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-surface text-primary">
                 <HomeIcon className="h-6 w-6" strokeWidth={1.75} aria-hidden="true" />
               </span>
-              <h3 className="font-serif-display text-xl text-ink">
+              <h3 className="font-serif-display text-xl text-primary-dark">
                 Home Care Clients
               </h3>
               <p className="text-sm leading-relaxed text-slate-600">
@@ -110,10 +110,10 @@ export default function AboutPage() {
       {/* Service area */}
       <section className="py-20 sm:py-24">
         <Container className="flex flex-col items-center gap-6 text-center">
-          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky text-navy">
+          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-surface text-primary">
             <MapPin className="h-6 w-6" strokeWidth={1.75} aria-hidden="true" />
           </span>
-          <h2 className="font-serif-display max-w-xl text-2xl text-ink sm:text-3xl">
+          <h2 className="font-serif-display max-w-xl text-2xl text-primary-dark sm:text-3xl">
             Proudly based in Newark, serving the surrounding community.
           </h2>
           <p className="max-w-lg text-base leading-relaxed text-slate-600">

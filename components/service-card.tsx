@@ -11,8 +11,8 @@ export default function ServiceCard({ service }: { service: Service }) {
       href={`/services/${service.slug}`}
       className={`group relative flex flex-col gap-5 rounded-3xl border p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_-24px_rgba(26,67,191,0.25)] ${
         service.featured
-          ? "border-gold/30 bg-linear-to-br from-navy to-ink text-white"
-          : "border-line bg-white hover:border-navy/20"
+          ? "border-gold/30 bg-linear-to-br from-primary to-primary-dark text-white"
+          : "border-line bg-white hover:border-primary/20"
       }`}
     >
       {service.featured && (
@@ -22,14 +22,14 @@ export default function ServiceCard({ service }: { service: Service }) {
       )}
       <span
         className={`flex h-12 w-12 items-center justify-center rounded-2xl ${
-          service.featured ? "bg-white/10 text-gold-soft" : "bg-sky text-navy"
+          service.featured ? "bg-white/10 text-gold-soft" : "bg-primary-surface text-primary"
         }`}
       >
         <Icon className="h-6 w-6" strokeWidth={1.75} aria-hidden="true" />
       </span>
       <div className="flex flex-col gap-2">
         <h3
-          className={`font-serif-display text-xl ${service.featured ? "text-white" : "text-ink"}`}
+          className={`font-serif-display text-xl ${service.featured ? "text-white" : "text-primary-dark"}`}
         >
           {service.name}
         </h3>
@@ -41,7 +41,7 @@ export default function ServiceCard({ service }: { service: Service }) {
       </div>
       <span
         className={`mt-auto inline-flex items-center gap-1.5 text-sm font-semibold ${
-          service.featured ? "text-gold-soft" : "text-navy"
+          service.featured ? "text-gold-soft" : "text-primary"
         }`}
       >
         Learn more

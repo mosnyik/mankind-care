@@ -5,13 +5,13 @@ type Variant = "primary" | "gold" | "outline" | "outline-light" | "ghost";
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-navy text-white hover:bg-ink shadow-[0_10px_30px_-12px_rgba(26,67,191,0.55)]",
+    "bg-primary text-white hover:bg-primary-dark shadow-[0_10px_30px_-12px_rgba(26,67,191,0.55)]",
   gold: "bg-gold text-white hover:bg-[#a37a30] shadow-[0_10px_30px_-12px_rgba(182,137,58,0.55)]",
   outline:
-    "border border-line text-navy bg-white hover:bg-sky hover:border-navy/20",
+    "border border-line text-primary bg-white hover:bg-primary-surface hover:border-primary/20",
   "outline-light":
     "border border-white/25 text-white bg-transparent hover:bg-white/10 hover:border-white/40",
-  ghost: "text-navy hover:bg-sky",
+  ghost: "text-primary hover:bg-primary-surface",
 };
 
 type CommonProps = {
@@ -37,7 +37,7 @@ type ButtonAsButton = CommonProps & {
 export default function Button(props: ButtonAsLink | ButtonAsButton) {
   const { children, variant = "primary", className = "", icon } = props;
   const base =
-    "inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold tracking-wide transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60";
+    "inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold tracking-wide transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-accent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60";
   const classes = `${base} ${variantClasses[variant]} ${className}`;
 
   if ("href" in props && props.href) {

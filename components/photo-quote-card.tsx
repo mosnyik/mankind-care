@@ -23,9 +23,9 @@ export default function PhotoQuoteCard({
         className="object-cover"
         priority
       />
-      <div className="absolute inset-0 bg-linear-to-t from-ink via-ink/25 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-primary-dark via-primary-dark/25 to-transparent" />
       {badgeLabel && (
-        <span className="absolute right-6 top-6 rounded-full bg-white/95 px-4 py-1.5 text-xs font-semibold text-navy shadow-lg">
+        <span className="absolute right-6 top-6 rounded-full bg-white/95 px-4 py-1.5 text-xs font-semibold text-primary shadow-lg">
           {badgeLabel}
         </span>
       )}

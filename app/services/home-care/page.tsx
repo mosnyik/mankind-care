@@ -34,17 +34,17 @@ export default function HomeCarePage() {
         <Container className="flex flex-col gap-8">
           <Link
             href="/services"
-            className="inline-flex w-fit items-center gap-2 text-sm font-medium text-navy transition-colors hover:text-blue"
+            className="inline-flex w-fit items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary-accent"
           >
             <ArrowLeft className="h-4 w-4" strokeWidth={2} />
             All Services
           </Link>
 
           <div className="flex flex-col items-start gap-6">
-            <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-navy shadow-[0_16px_40px_-20px_rgba(26,67,191,0.3)]">
+            <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-primary shadow-[0_16px_40px_-20px_rgba(26,67,191,0.3)]">
               <HomeIcon className="h-8 w-8" strokeWidth={1.6} aria-hidden="true" />
             </span>
-            <h1 className="font-serif-display max-w-2xl text-4xl leading-[1.1] text-ink sm:text-5xl">
+            <h1 className="font-serif-display max-w-2xl text-4xl leading-[1.1] text-primary-dark sm:text-5xl">
               {homeCare.title}
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-slate-600">
@@ -77,7 +77,7 @@ export default function HomeCarePage() {
             </p>
 
             <div className="flex flex-col gap-5 rounded-4xl border border-line bg-white p-8">
-              <h2 className="font-serif-display text-xl text-ink">
+              <h2 className="font-serif-display text-xl text-primary-dark">
                 What this includes
               </h2>
               <ul className="flex flex-col gap-3">
@@ -87,7 +87,7 @@ export default function HomeCarePage() {
                     className="flex items-start gap-3 text-base leading-relaxed text-slate-600"
                   >
                     <CheckCircle2
-                      className="mt-0.5 h-5 w-5 shrink-0 text-blue"
+                      className="mt-0.5 h-5 w-5 shrink-0 text-primary-accent"
                       strokeWidth={1.8}
                       aria-hidden="true"
                     />
@@ -98,18 +98,18 @@ export default function HomeCarePage() {
             </div>
           </div>
 
-          <aside className="flex h-fit flex-col gap-5 rounded-4xl border border-line bg-sky p-8 lg:sticky lg:top-28">
-            <h2 className="font-serif-display text-xl text-ink">
+          <aside className="flex h-fit flex-col gap-5 rounded-4xl border border-line bg-primary-surface p-8 lg:sticky lg:top-28">
+            <h2 className="font-serif-display text-xl text-primary-dark">
               Ready to talk?
             </h2>
             <p className="text-sm leading-relaxed text-slate-600">
               Call us directly and we will walk you through how our home
               care agency can support your family.
             </p>
-            <div className="flex flex-col gap-3 border-t border-navy/10 pt-5">
+            <div className="flex flex-col gap-3 border-t border-primary/10 pt-5">
               <a
                 href={site.phoneHref}
-                className="flex items-center gap-3 text-sm font-medium text-navy hover:text-blue"
+                className="flex items-center gap-3 text-sm font-medium text-primary hover:text-primary-accent"
               >
                 <Phone className="h-4 w-4 shrink-0" strokeWidth={1.8} />
                 {site.phone}
