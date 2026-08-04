@@ -12,8 +12,9 @@ import { homeCare, services, site } from "@/lib/site";
 import { serviceImages } from "@/lib/images";
 
 export const metadata: Metadata = {
-  title: homeCare.title,
-  description: homeCare.description,
+  title: "Home Care Agency in Newark, NJ",
+  description:
+    "Mankind Care LLC provides trusted home care, support, and companionship for individuals and families in Newark, New Jersey.",
   alternates: {
     canonical: "/services/home-care",
   },
@@ -49,6 +50,9 @@ export default function HomeCarePage() {
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-slate-600">
               {homeCare.short}
+            </p>
+            <p className="text-sm font-medium text-primary">
+              Serving individuals and families in Newark, New Jersey.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button href={site.phoneHref} variant="gold">

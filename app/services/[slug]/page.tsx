@@ -29,8 +29,8 @@ export async function generateMetadata({
   }
 
   return {
-    title: service.name,
-    description: service.description,
+    title: `${service.name} in Newark, NJ`,
+    description: `${service.description} Serving individuals and families in Newark, New Jersey.`,
     alternates: {
       canonical: `/services/${service.slug}`,
     },
@@ -85,6 +85,9 @@ export default async function ServiceDetailPage({
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-slate-600">
               {service.short}
+            </p>
+            <p className="text-sm font-medium text-primary">
+              Serving individuals and families in Newark, New Jersey.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button href={site.phoneHref} variant="gold">
