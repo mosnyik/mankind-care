@@ -41,7 +41,7 @@ export default function HomeCarePage() {
           </Link>
 
           <div className="flex flex-col items-start gap-6">
-            <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-navy shadow-[0_16px_40px_-20px_rgba(18,41,79,0.3)]">
+            <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-navy shadow-[0_16px_40px_-20px_rgba(26,67,191,0.3)]">
               <HomeIcon className="h-8 w-8" strokeWidth={1.6} aria-hidden="true" />
             </span>
             <h1 className="font-serif-display max-w-2xl text-4xl leading-[1.1] text-ink sm:text-5xl">

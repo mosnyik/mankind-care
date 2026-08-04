@@ -26,7 +26,7 @@ export default function RelatedServices({
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}
-              className="group flex flex-col gap-4 rounded-3xl border border-line bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-navy/20 hover:shadow-[0_24px_60px_-28px_rgba(18,41,79,0.25)]"
+              className="group flex flex-col gap-4 rounded-3xl border border-line bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-navy/20 hover:shadow-[0_24px_60px_-28px_rgba(26,67,191,0.25)]"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-sky text-navy">
                 <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />

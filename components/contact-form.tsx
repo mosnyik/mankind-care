@@ -47,7 +47,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-5 rounded-4xl border border-line bg-white p-8 shadow-[0_30px_80px_-40px_rgba(18,41,79,0.2)] sm:p-10"
+      className="flex flex-col gap-5 rounded-4xl border border-line bg-white p-8 shadow-[0_30px_80px_-40px_rgba(26,67,191,0.2)] sm:p-10"
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="flex flex-col gap-2">

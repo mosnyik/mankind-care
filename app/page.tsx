@@ -134,7 +134,7 @@ export default function Home() {
       {/* Home care callout */}
       <section className="py-20 sm:py-24">
         <Container>
-          <div className="grid gap-10 rounded-4xl border border-line bg-white p-9 shadow-[0_30px_80px_-40px_rgba(18,41,79,0.2)] sm:p-12 lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-14">
+          <div className="grid gap-10 rounded-4xl border border-line bg-white p-9 shadow-[0_30px_80px_-40px_rgba(26,67,191,0.2)] sm:p-12 lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-14">
             <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-sky text-navy">
               <HomeIcon className="h-8 w-8" strokeWidth={1.6} aria-hidden="true" />
             </span>
