@@ -208,7 +208,7 @@ export const topQuestions = [
     icon: "shield",
     question: "Are your caregivers qualified?",
     answer:
-      "Our caregivers are trained, attentive, and genuinely invested in the people they support. Quality care and comfort are the foundation of everything we do.",
+      "Our caregivers are certified, trained, attentive, and genuinely invested in the people they support. Quality care and comfort are the foundation of everything we do.",
   },
   {
     icon: "activity",
