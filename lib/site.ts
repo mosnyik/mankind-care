@@ -1,8 +1,8 @@
 export const site = {
   name: "Mankind Care LLC",
   shortName: "Mankind Care",
-  domain: "mankindcare.com",
-  url: "https://mankindcare.com",
+  domain: "mankindcare.net",
+  url: "https://mankindcare.net",
   tagline: "Care that helps people thrive, every single day.",
   description:
     "Mankind Care LLC provides adult day habilitation, home care, and DDD support services in Newark, New Jersey. Reliable transportation, qualified caregivers, and a full range of life skills programs.",
