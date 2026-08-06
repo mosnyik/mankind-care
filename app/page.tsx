@@ -14,6 +14,7 @@ import ServiceCard from "@/components/service-card";
 import ValueCard from "@/components/value-card";
 import CtaBanner from "@/components/cta-banner";
 import PhotoQuoteCard from "@/components/photo-quote-card";
+import HeroSlider from "@/components/hero-slider";
 import {
   coreSkills,
   homeCare,
@@ -22,6 +23,29 @@ import {
   topQuestions,
 } from "@/lib/site";
 import { heroImages } from "@/lib/images";
+
+const heroSlides = [
+  {
+    src: heroImages.home.src,
+    alt: heroImages.home.alt,
+    quote:
+      "Our service sets us apart. We render quality care that makes our clients comfortable.",
+    badgeLabel: "10 Support Services",
+  },
+  {
+    src: heroImages.services.src,
+    alt: heroImages.services.alt,
+    quote:
+      "Every day blends skill building with genuine connection, guided by caregivers who take the time to understand each person.",
+    badgeLabel: "Adult Day Habilitation",
+  },
+  {
+    src: heroImages.about.src,
+    alt: heroImages.about.alt,
+    quote: "Real skills, real connection, real progress, for every individual we support.",
+    badgeLabel: "DDD & Home Care",
+  },
+];
 
 export default function Home() {
   return (
@@ -37,7 +61,7 @@ export default function Home() {
           aria-hidden="true"
         />
         <Container className="relative grid gap-14 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-28">
-          <div className="flex flex-col items-start gap-7 animate-fade-up">
+          <div className="order-2 flex flex-col items-start gap-7 animate-fade-up lg:order-1">
             <span className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
               <Sparkles className="h-3.5 w-3.5 text-gold" strokeWidth={2} />
               DDD &amp; Home Care Provider, Newark NJ
@@ -78,14 +102,19 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative animate-fade-in">
-            <PhotoQuoteCard
-              src={heroImages.home.src}
-              alt={heroImages.home.alt}
-              quote="Our service sets us apart. We render quality care that makes our clients comfortable."
-              skills={coreSkills}
-              badgeLabel="10 Support Services"
-            />
+          <div className="order-1 relative animate-fade-in lg:order-2">
+            <div className="hidden lg:block">
+              <PhotoQuoteCard
+                src={heroImages.home.src}
+                alt={heroImages.home.alt}
+                quote="Our service sets us apart. We render quality care that makes our clients comfortable."
+                skills={coreSkills}
+                badgeLabel="10 Support Services"
+              />
+            </div>
+            <div className="lg:hidden">
+              <HeroSlider slides={heroSlides} />
+            </div>
           </div>
         </Container>
       </section>
