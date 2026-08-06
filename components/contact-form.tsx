@@ -3,7 +3,6 @@
 import { useState, type FormEvent } from "react";
 import { Send } from "lucide-react";
 import Button from "@/components/button";
-import { site } from "@/lib/site";
 
 const interestOptions = [
   "Adult Day Habilitation",
@@ -14,34 +13,44 @@ const interestOptions = [
 ];
 
 export default function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "ready">("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const form = new FormData(event.currentTarget);
-    const name = String(form.get("name") ?? "").trim();
-    const phone = String(form.get("phone") ?? "").trim();
-    const email = String(form.get("email") ?? "").trim();
-    const interest = String(form.get("interest") ?? "");
-    const message = String(form.get("message") ?? "").trim();
+    const formEl = event.currentTarget;
+    const form = new FormData(formEl);
+    const payload = {
+      name: String(form.get("name") ?? "").trim(),
+      phone: String(form.get("phone") ?? "").trim(),
+      email: String(form.get("email") ?? "").trim(),
+      interest: String(form.get("interest") ?? ""),
+      message: String(form.get("message") ?? "").trim(),
+    };
 
-    const subject = `Website inquiry from ${name || "a website visitor"}`;
-    const bodyLines = [
-      `Name: ${name}`,
-      `Phone: ${phone || "Not provided"}`,
-      `Email: ${email || "Not provided"}`,
-      `Interested in: ${interest}`,
-      "",
-      "Message:",
-      message,
-    ];
+    setStatus("submitting");
+    setErrorMessage("");
 
-    const mailto = `${site.emailHref}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-    setStatus("ready");
-    window.location.href = mailto;
+      if (!response.ok) {
+        const data = await response.json().catch(() => null);
+        throw new Error(data?.error || "Something went wrong. Please try again.");
+      }
+
+      setStatus("success");
+      formEl.reset();
+    } catch (error) {
+      setStatus("error");
+      setErrorMessage(
+        error instanceof Error ? error.message : "Something went wrong. Please try again.",
+      );
+    }
   }
 
   return (
@@ -127,19 +136,23 @@ export default function ContactForm() {
       </div>
 
       <div className="flex flex-col items-start gap-3 pt-2 sm:flex-row sm:items-center sm:justify-between">
-        <Button type="submit" variant="gold">
-          Send Message
+        <Button type="submit" variant="gold" disabled={status === "submitting"}>
+          {status === "submitting" ? "Sending..." : "Send Message"}
           <Send className="h-4 w-4" strokeWidth={2} />
         </Button>
         <p className="text-xs leading-relaxed text-slate-400">
-          Submitting opens your email app with this message ready to send to
-          our team.
+          We typically respond within one business day.
         </p>
       </div>
-      {status === "ready" && (
+      {status === "success" && (
         <p className="text-sm font-medium text-primary" role="status">
-          Almost done. Send the email that just opened and we will get back
+          Thanks for reaching out. We received your message and will get back
           to you soon.
+        </p>
+      )}
+      {status === "error" && (
+        <p className="text-sm font-medium text-red-600" role="alert">
+          {errorMessage}
         </p>
       )}
     </form>
