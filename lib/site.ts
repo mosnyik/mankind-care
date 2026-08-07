@@ -59,7 +59,7 @@ export const services: Service[] = [
     description:
       "Our Adult Day Habilitation program gives individuals a warm, structured place to build skills and enjoy their day. Every visit blends learning, activity, and genuine connection, guided by caregivers who take the time to understand each person they support.",
     bullets: [
-      "Structured daily programming built around real goals",
+      "Structured daily activities built around real goals",
       "A warm, consistent group setting with caring staff",
       "Skill building blended with genuine social connection",
     ],
@@ -101,7 +101,7 @@ export const services: Service[] = [
     bullets: [
       "Guided support for errands and appointments",
       "Confidence building in everyday settings",
-      "Encouragement toward greater independence",
+      "Encouragement towards greater independence",
     ],
   },
   {
