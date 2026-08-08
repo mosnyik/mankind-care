@@ -15,7 +15,7 @@ export default function Logo({ light = false }: { light?: boolean }) {
           width={455}
           height={472}
           priority
-          className="h-11 w-auto transition-transform duration-200 group-hover:scale-105"
+          className="h-14 w-auto transition-transform duration-200 group-hover:scale-105"
         />
       ) : (
         <Image
@@ -24,7 +24,7 @@ export default function Logo({ light = false }: { light?: boolean }) {
           width={671}
           height={607}
           priority
-          className="h-11 w-auto transition-transform duration-200 group-hover:scale-105"
+          className="h-14 w-auto transition-transform duration-200 group-hover:scale-105"
         />
       )}
     </Link>
