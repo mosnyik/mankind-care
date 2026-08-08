@@ -55,11 +55,12 @@ export const services: Service[] = [
     slug: "adult-day-habilitation",
     name: "Adult Day Habilitation",
     icon: "sunrise",
-    short: "Our flagship day program of structured, meaningful daily activity.",
+    short:
+      "Our flagship day program is well structured and packed with daily activities.",
     description:
-      "Our Adult Day Habilitation program gives individuals a warm, structured place to build skills and enjoy their day. Every visit blends learning, activity, and genuine connection, guided by caregivers who take the time to understand each person they support.",
+      "Our Adult Day Habilitation program gives individuals a warm, structured place to build skills and enjoy their day. Every visit blends learning, activities, and genuine connection; guided by caregivers who take the time to understand each person they support.",
     bullets: [
-      "Structured daily activities built around real goals",
+      "Structured daily programs built around real goals",
       "A warm, consistent group setting with caring staff",
       "Skill building blended with genuine social connection",
     ],
@@ -99,7 +100,7 @@ export const services: Service[] = [
     description:
       "We help individuals participate confidently in the community around them, from errands and appointments to everyday routines outside the home. Our team provides the guidance and encouragement needed to move through daily life with independence.",
     bullets: [
-      "Guided support for errands and appointments",
+      "Guided support for errands and hospital appointments",
       "Confidence building in everyday settings",
       "Encouragement towards greater independence",
     ],
@@ -162,7 +163,7 @@ export const services: Service[] = [
     icon: "route",
     short: "Clear, personalized roadmaps toward long term career goals.",
     description:
-      "We help individuals think beyond today and plan for tomorrow, mapping out realistic steps toward the career and future they want. It is guidance that grows with the person as their goals evolve.",
+      "We help individuals think beyond today and plan for tomorrow, mapping out realistic steps toward the career and future they want. We provide guidance for your loved ones that grow with them as their goals evolve.",
     bullets: [
       "Clear, realistic roadmaps",
       "Goals that grow with the person",
@@ -214,7 +215,7 @@ export const topQuestions = [
     icon: "activity",
     question: "Is there a variety of activities?",
     answer:
-      "Every day includes a mix of skill building and activity: problem solving, social time, daily living practice, and leisure, so no two days feel the same.",
+      "Every day includes a mix of skill building and activities: problem solving, social time, daily living practice, and leisure, so no two days feel the same.",
   },
 ] as const;
 
@@ -252,8 +253,7 @@ export const getStartedSteps = [
   },
   {
     title: "Begin your program",
-    description:
-      "Start with a team that treats you like family from day one.",
+    description: "Start with a team that treats you like family from day one.",
   },
 ] as const;
 

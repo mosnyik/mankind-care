@@ -117,7 +117,7 @@ export default async function ServiceDetailPage({
 
             <div className="flex flex-col gap-5 rounded-4xl border border-line bg-white p-8">
               <h2 className="font-serif-display text-xl text-primary-dark">
-                What this includes
+                What this includes:
               </h2>
               <ul className="flex flex-col gap-3">
                 {service.bullets.map((bullet) => (

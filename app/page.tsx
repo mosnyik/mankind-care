@@ -15,13 +15,7 @@ import ValueCard from "@/components/value-card";
 import CtaBanner from "@/components/cta-banner";
 import PhotoQuoteCard from "@/components/photo-quote-card";
 import HeroSlider from "@/components/hero-slider";
-import {
-  coreSkills,
-  homeCare,
-  services,
-  site,
-  topQuestions,
-} from "@/lib/site";
+import { coreSkills, homeCare, services, site, topQuestions } from "@/lib/site";
 import { heroImages } from "@/lib/images";
 
 const heroSlides = [
@@ -29,7 +23,7 @@ const heroSlides = [
     src: heroImages.home.src,
     alt: heroImages.home.alt,
     quote:
-      "Our service sets us apart. We render quality care that makes our clients comfortable.",
+      "Our services set us apart. We render quality care that makes our clients comfortable.",
     badgeLabel: "10 Support Services",
   },
   {
@@ -42,7 +36,8 @@ const heroSlides = [
   {
     src: heroImages.about.src,
     alt: heroImages.about.alt,
-    quote: "Real skills, real connection, real progress, for every individual we support.",
+    quote:
+      "Real skills, real connection, real progress, for every individual we support.",
     badgeLabel: "DDD & Home Care",
   },
 ];
@@ -68,12 +63,15 @@ export default function Home() {
             </span>
             <h1 className="font-serif-display text-4xl leading-[1.08] text-primary-dark sm:text-5xl lg:text-6xl">
               Care that helps people{" "}
-              <span className="text-primary-accent">thrive</span>, every single day.
+              <span className="text-primary-accent">thrive</span>, every single
+              day.
             </h1>
             <p className="max-w-lg text-lg leading-relaxed text-slate-600">
-              Mankind Care LLC delivers quality adult day habilitation and
-              home care that makes people feel comfortable, supported, and
-              genuinely seen. Real skills, real connection, real progress.
+              Mankind Care LLC delivers quality adult day habilitation and home
+              care that makes your loved ones feel comfortable, supported, and
+              genuinely seen.
+              <br />
+              Real skills, real connection, real progress.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button href={site.phoneHref} variant="gold">
@@ -88,16 +86,29 @@ export default function Home() {
 
             <div className="mt-4 grid w-full max-w-lg grid-cols-1 gap-3 border-t border-line pt-6 sm:grid-cols-3">
               <div className="flex items-center gap-2.5">
-                <Clock className="h-4 w-4 shrink-0 text-primary" strokeWidth={1.8} />
-                <span className="text-sm text-slate-600">{site.hoursShort}</span>
+                <Clock
+                  className="h-4 w-4 shrink-0 text-primary"
+                  strokeWidth={1.8}
+                />
+                <span className="text-sm text-slate-600">
+                  {site.hoursShort}
+                </span>
               </div>
               <div className="flex items-center gap-2.5">
-                <MapPin className="h-4 w-4 shrink-0 text-primary" strokeWidth={1.8} />
+                <MapPin
+                  className="h-4 w-4 shrink-0 text-primary"
+                  strokeWidth={1.8}
+                />
                 <span className="text-sm text-slate-600">Newark, NJ</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <ShieldCheck className="h-4 w-4 shrink-0 text-primary" strokeWidth={1.8} />
-                <span className="text-sm text-slate-600">10 Support Services</span>
+                <ShieldCheck
+                  className="h-4 w-4 shrink-0 text-primary"
+                  strokeWidth={1.8}
+                />
+                <span className="text-sm text-slate-600">
+                  10 Support Services
+                </span>
               </div>
             </div>
           </div>
@@ -107,7 +118,7 @@ export default function Home() {
               <PhotoQuoteCard
                 src={heroImages.home.src}
                 alt={heroImages.home.alt}
-                quote="Our service sets us apart. We render quality care that makes our clients comfortable."
+                quote="Our services set us apart. We render quality care that makes our clients comfortable."
                 skills={coreSkills}
                 badgeLabel="10 Support Services"
               />
@@ -165,7 +176,11 @@ export default function Home() {
         <Container>
           <div className="grid gap-10 rounded-4xl border border-line bg-white p-9 shadow-[0_30px_80px_-40px_rgba(26,67,191,0.2)] sm:p-12 lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-14">
             <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-surface text-primary">
-              <HomeIcon className="h-8 w-8" strokeWidth={1.6} aria-hidden="true" />
+              <HomeIcon
+                className="h-8 w-8"
+                strokeWidth={1.6}
+                aria-hidden="true"
+              />
             </span>
             <div className="flex flex-col gap-3">
               <h2 className="font-serif-display text-2xl text-primary-dark sm:text-3xl">
@@ -175,7 +190,11 @@ export default function Home() {
                 {homeCare.description}
               </p>
             </div>
-            <Button href={site.phoneHref} variant="primary" className="shrink-0">
+            <Button
+              href={site.phoneHref}
+              variant="primary"
+              className="shrink-0"
+            >
               <Phone className="h-4 w-4" strokeWidth={2} />
               Ask About Home Care
             </Button>

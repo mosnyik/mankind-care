@@ -39,7 +39,7 @@ export default function AboutPage() {
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-slate-600">
               Mankind Care LLC is an adult day habilitation and home care
-              provider based in Newark, New Jersey. We were built around a
+              provider based in Newark, New Jersey. We are built around a
               simple belief: people deserve care that makes them feel
               comfortable, respected, and capable of more.
             </p>
@@ -47,7 +47,7 @@ export default function AboutPage() {
           <PhotoQuoteCard
             src={heroImages.about.src}
             alt={heroImages.about.alt}
-            quote="Our service sets us apart. We render quality care to our clients that makes them comfortable, and we help build the skills they need for everyday life."
+            quote="Our services set us apart. We render quality care to our clients that makes them comfortable, and we help build the skills they need for everyday life."
             skills={coreSkills}
           />
         </Container>
