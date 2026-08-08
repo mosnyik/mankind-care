@@ -56,7 +56,7 @@ export const services: Service[] = [
     name: "Adult Day Habilitation",
     icon: "sunrise",
     short:
-      "Our flagship day program is well structured and packed with daily activities.",
+      "Our flagship day program is well structured and packed with meaningful daily activities.",
     description:
       "Our Adult Day Habilitation program gives individuals a warm, structured place to build skills and enjoy their day. Every visit blends learning, activities, and genuine connection; guided by caregivers who take the time to understand each person they support.",
     bullets: [
